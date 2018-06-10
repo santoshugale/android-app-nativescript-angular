@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- Default style for DatePicker - in spinner mode -->
+<style name="SpinnerDatePicker" parent="android:Widget.Material.Light.DatePicker">
+	<item name="android:datePickerMode">calendar</item>
+</style>
+
+<!-- Default style for TimePicker - in spinner mode -->
+<style name="SpinnerTimePicker" parent="android:Widget.Material.Light.TimePicker">
+	<item name="android:timePickerMode">clock</item>
+</style>
+</resources>

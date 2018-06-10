@@ -1,0 +1,16 @@
+<GridLayout>
+    <StackLayout>
+        <TextField style="margin-top: 10;" hint="Crop Name" (tap)="showPicker()" [(ngModel)]="cropMasterModel.cropName"></TextField>
+        <GridLayout rows="auto,auto,auto" columns="120,100,120">
+            <button row="0" col="0" text="Brinjal"></button>
+            <button row="0" col="1" text="Vang"></button>
+            <button row="0" col="2" text="Marathi"></button>
+        </GridLayout>
+        <TextField hint="Crop Photo" [(ngModel)]="cropMasterModel.cropPhoto"></TextField>
+        <TextField hint="Duration in Bhatti" keyboardType="number" [(ngModel)]="cropMasterModel.durationInBhatti"></TextField>
+        <TextField hint="Duration in Polyhouse" keyboardType="number" [(ngModel)]="cropMasterModel.durationInPolyhouse"></TextField>
+        <button text="Add" (tap)="onSubmitClick()"></button>
+    </StackLayout>
+    <FilterableListpicker #myfilter blur="dark" hintText="Type to filter" [source]="listitems" (canceled)="cancelFilterableList($event)"
+        (itemTapped)="itemTapped($event)"></FilterableListpicker>
+</GridLayout>

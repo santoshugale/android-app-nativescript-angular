@@ -1,0 +1,16 @@
+<ActionBar backgroundColor="LightBlue" title="{{ actionBarTitle }}">
+  <NavigationButton icon="res://ic_menu_black_24dp" (tap)="onMenuBarClick()" *ifAndroid></NavigationButton>
+  <ActionItem icon="res://ic_menu" ios.position="left" (tap)="onMenuBarClick()" *ifIos></ActionItem>
+</ActionBar>
+<DockLayout>
+  <StackLayout backgroundColor="AliceBlue" dock="left" *ngIf="isMenuBarVisible">
+    <Label text="Booking" class="medium-spacing" (tap)="onBookingFormClick()"> </Label>
+    <Label text="Create Batch" class="medium-spacing" (tap)="onCreateBatchFormClick()"> </Label>
+    <Label text="Crop Master" class="medium-spacing" (tap)="onCropMasterFormClick()"> </Label>
+    <Label text="Booking List" class="medium-spacing" (tap)="onBookingListClick()"> </Label>
+    <Label text="Batch List" class="medium-spacing" (tap)="onBatchListClick()"> </Label>
+  </StackLayout>
+  <div dock="right">
+    <router-outlet></router-outlet>
+  </div>
+</DockLayout>

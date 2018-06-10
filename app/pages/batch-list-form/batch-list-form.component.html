@@ -1,0 +1,14 @@
+<StackLayout>
+  <GridLayout style="margin-top: 10;" columns="80,80,80,80" rows="auto,auto,auto,auto">
+    <Label row="0" col="0" text="Crop Name"></Label>
+    <Label row="0" col="1" text="Batch Number"></Label>
+    <Label row="0" col="2" text="Quantity"></Label>
+    <Label row="0" col="3" text="Dispatch Date"></Label>
+    <ng-template ngFor let-item let-i="index" [ngForOf]="batchListFormModel.batchList">
+      <Label row="1" col="0" [text]="item.cropName"></Label>
+      <Label row="1" col="1" [text]="item.batchNumber"></Label>
+      <Label row="1" col="2" [text]="item.cropQuantity"></Label>
+      <Label row="1" col="3" [text]="item.dispatchDate"></Label>
+    </ng-template>
+  </GridLayout>
+</StackLayout>

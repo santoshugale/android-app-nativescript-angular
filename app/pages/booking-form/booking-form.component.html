@@ -1,0 +1,16 @@
+<GridLayout>
+    <StackLayout>
+        <TextField style="margin-top: 10;" hint="Client Name" keyboardType="email" [(ngModel)]="bookingFormModel.name"></TextField>
+        <TextField hint="Address" [(ngModel)]="bookingFormModel.address"></TextField>
+        <TextField hint="Mobile" keyboardType="number" [(ngModel)]="bookingFormModel.mobile" maxLength="10" minLength="10"></TextField>
+        <TextField hint="Email" [(ngModel)]="bookingFormModel.email"></TextField>
+        <TextField hint="Crop Name" (tap)="showPicker()" [(ngModel)]="bookingFormModel.cropName"></TextField>
+        <button text="Check Availability" tap="onCheckAvailabilityClick()"></button>
+        <TextField hint="Crop Quantity" keyboardType="number" [(ngModel)]="bookingFormModel.cropQuantity"></TextField>
+        <TextField hint="Advance" keyboardType="number" [(ngModel)]="bookingFormModel.advance"></TextField>
+        <TextField hint="Dispatch Date" (tap)="selectDate()" [(ngModel)]="bookingFormModel.dispatchDate"></TextField>
+        <button text="Submit" (tap)="onSubmitClick()"></button>
+    </StackLayout>
+    <FilterableListpicker #myfilter blur="dark" hintText="Type to filter" [source]="listitems" (canceled)="cancelFilterableList($event)"
+        (itemTapped)="itemTapped($event)"></FilterableListpicker>
+</GridLayout>

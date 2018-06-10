@@ -1,0 +1,12 @@
+<GridLayout>
+    <StackLayout>
+        <TextField style="margin-top: 10;" hint="Crop Name" (tap)="showPicker()" [(ngModel)]="createBatchFormModel.cropName"></TextField>
+        <TextField hint="Crop Quantity" keyboardType="number" [(ngModel)]="createBatchFormModel.cropQuantity"></TextField>
+        <TextField hint="Start Date" (tap)="selectStartDate()" [(ngModel)]="createBatchFormModel.startDate"></TextField>
+        <TextField hint="Remove From Batti" [(ngModel)]="createBatchFormModel.removeFromBatti"></TextField>
+        <TextField hint="Dispatch Date" (tap)="selectDispatchDate()" [(ngModel)]="createBatchFormModel.dispatchDate"></TextField>
+        <button text="Add" (tap)="onAddClick()"></button>
+    </StackLayout>
+    <FilterableListpicker #myfilter blur="dark" hintText="Type to filter" [source]="listitems" (canceled)="cancelFilterableList($event)"
+        (itemTapped)="itemTapped($event)"></FilterableListpicker>
+</GridLayout>

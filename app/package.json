@@ -1,0 +1,8 @@
+{
+  "main": "main.js",
+  "name": "nativescript-template-ng-groceries",
+  "version": "3.0.0",
+  "devDependencies": {
+    "@angular/cli": "^1.6.2"
+  }
+}
